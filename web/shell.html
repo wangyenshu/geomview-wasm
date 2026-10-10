@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Geomview</title>
+<style>html,body,#x11{margin:0;width:100%;height:100%;overflow:hidden}</style>
+</head>
+<body>
+<div id="x11"></div>
+<script>
+var Module = {
+  x11WasmRoot: "#x11",
+  // extra Geomview command-line arguments: ?arg=-c&arg=(...)&arg=file.off
+  arguments: new URLSearchParams(location.search).getAll("arg")
+};
+</script>
+{{{ SCRIPT }}}
+</body>
+</html>

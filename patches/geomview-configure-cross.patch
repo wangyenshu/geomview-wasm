@@ -1,0 +1,14 @@
+diff --git a/configure.ac b/configure.ac
+index 9df4e0b..45f08f3 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -878,7 +878,8 @@ else
+   return 0;])],[AC_MSG_RESULT([yes])
+ AC_DEFINE(POPEN_ACCEPTS_RB, 1,
+ [Define to 1 if popen(CMD, MODE) accepts "rb" for MODE])],
+-[AC_MSG_RESULT([no])])
++[AC_MSG_RESULT([no])],
++[AC_MSG_RESULT([no (cross-compiling)])])
+ AC_LANG_POP([C])
+ 
+ AM_CONDITIONAL(HAVE_CXX,    test x$HAVE_CXX = xtrue)

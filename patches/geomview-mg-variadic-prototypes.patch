@@ -1,0 +1,25 @@
+diff --git a/src/lib/mg/common/mg.h b/src/lib/mg/common/mg.h
+index d9985e0..ae2cec0 100644
+--- a/src/lib/mg/common/mg.h
++++ b/src/lib/mg/common/mg.h
+@@ -49,7 +49,7 @@ typedef struct mgcontext mgcontext;     /* Opaque typedef */
+ 
+ typedef int (*mgshadefunc)( int npoints, HPoint3 *points, Point3 *normals,
+ 			    ColorA *colors, ColorA *newcolors );
+-typedef void (*mgwinchfunc)( /*mgcontext *mgc, void *data, int win_why, ...*/ );
++typedef void (*mgwinchfunc)(mgcontext *mgc, void *data, int win_why, ...);
+ 
+ typedef struct mgNDctx mgNDctx;
+ typedef int (*mgNDmapfunc)(mgNDctx *NDctx,
+@@ -71,9 +71,9 @@ struct mgfuncs {  /* mg member functions; potentially changed per device */
+ 
+   int           (*mg_setdevice)(void);
+   int           (*mg_feature)(int feature);
+-  mgcontext *   (*mg_ctxcreate)(/* int a1, ... */);
++  mgcontext *   (*mg_ctxcreate)(int a1, ...);
+   void          (*mg_ctxdelete)(mgcontext *ctx);
+-  int           (*mg_ctxset)(/* a1, ...  */);
++  int           (*mg_ctxset)(int a1, ...);
+   int           (*mg_ctxget)(int attr, void* valueptr);
+   int           (*mg_ctxselect)(mgcontext *ctx);
+   void          (*mg_sync)(void);

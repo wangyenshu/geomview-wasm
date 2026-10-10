@@ -1,0 +1,17 @@
+diff --git a/src/lib/gprim/discgrp/extern.h b/src/lib/gprim/discgrp/extern.h
+index cf93544..c87fd2a 100644
+--- a/src/lib/gprim/discgrp/extern.h
++++ b/src/lib/gprim/discgrp/extern.h
+@@ -24,9 +24,9 @@
+ typedef double vec4[4];
+ 
+ /* in xform.c */
+-extern proj_matrix	*matmatmul4 ();
+-extern vec4		*vecmatmul4 ();
+-extern vec4		*matvecmul4 ();
++extern void		matmatmul4 ();
++extern void		vecmatmul4 ();
++extern void		matvecmul4 ();
+ 
+ /* in projective.c */
+ extern vec4		*conf2proj ();

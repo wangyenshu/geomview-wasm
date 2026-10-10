@@ -1,0 +1,14 @@
+diff --git a/src/libX11/XlibInt.h b/src/libX11/XlibInt.h
+index 1c0a8c2..639cd7c 100644
+--- a/src/libX11/XlibInt.h
++++ b/src/libX11/XlibInt.h
+@@ -36,7 +36,9 @@
+ #define UCHAR(c) ((unsigned char)(c))
+ #endif
+ 
++#ifndef X11_WASM_EVENT_QUEUE_LIMIT
+ #define X11_WASM_EVENT_QUEUE_LIMIT 256
++#endif
+ #define X11_WASM_UNICODE_KEYSYM_BASE 0x01000000U
+ #define X11_WASM_COMPOSITION_START 1
+ #define X11_WASM_COMPOSITION_UPDATE 2
