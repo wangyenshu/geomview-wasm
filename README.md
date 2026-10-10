@@ -5,6 +5,8 @@ Builds the Geomview Motif GUI (`gvx`) for the browser on x11.wasm + libXt + Moti
 ## Build
 
 ```
+chmod +x build.sh
+chmod +x tools/setup-emscripten.sh
 ./build.sh
 ```
 
