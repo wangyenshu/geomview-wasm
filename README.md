@@ -5,8 +5,7 @@ Builds the Geomview Motif GUI (`gvx`) for the browser on x11.wasm + libXt + Moti
 ## Build
 
 ```
-sudo apt install build-essential ninja-build autoconf automake libtool pkg-config \
-  flex bison patch git curl xz-utils python3 nodejs npm
+sudo apt install build-essential ninja-build autoconf automake libtool pkg-config flex bison patch git curl xz-utils python3 nodejs npm
 chmod +x build.sh
 chmod +x tools/setup-emscripten.sh
 ./build.sh
